@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageComputationProblem
 {
-    public static class EmployeeWage
+    public class EmployeeWage
     {
         public const int Is_FullTime = 2;
         public const int Is_PartTime = 1;
         public const int Wage_Per_Hour = 20;
         public const int MAX_Working_Day_Per_Month = 20;
         public const int MAX_Working_Hrs_Per_Month = 100;
-        public static void EmpWage()
+        public void EmpWage()
         {
             int empHrs=0;
             int wage;
