@@ -13,24 +13,23 @@ namespace EmployeeWageComputationProblem
             int fullTime = 2;
             int partTime = 1;
             int wagePerHour = 20;
-            int empHrs;
+            int empHrs=0;
             Random random = new Random();
             int empCheck=random.Next(0, 3);
-            if(empCheck == fullTime)
+            switch(empCheck)
             {
-                Console.WriteLine("Employee is FullTime");
-                empHrs = 8;
-
-            }
-            else if(empCheck == partTime)
-            {
-                Console.WriteLine("Employee is PartTime");
-                empHrs = 4;
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
-                empHrs = 0;
+                case 0:
+                    Console.WriteLine("Employee is Absent");
+                    empHrs = 0;
+                    break;
+                case 1:
+                    Console.WriteLine("Employee is Present PartTime");
+                    empHrs = 4;
+                    break;
+                case 2:
+                    Console.WriteLine("Employee is Present FullTime");
+                    empHrs = 8;
+                    break;
             }
             int wage = empHrs * wagePerHour;
             Console.WriteLine("Employee wage is {0}",wage);
