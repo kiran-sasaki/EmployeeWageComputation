@@ -4,7 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            EmployeeWage.EmpWage();
+            EmployeeWage employee = new EmployeeWage();
+            employee.EmpWage();
         }
     }
 }
